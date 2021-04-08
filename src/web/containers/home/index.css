@@ -1,0 +1,26 @@
+.layout {
+    background-image: url('../../../assets/space.svg') !important;
+    height: 700px;
+    background-repeat: no-repeat !important;
+    display: flex;
+    background-color: white !important;
+    background-attachment: fixed;
+    background-position: right !important;
+}
+.form-con {
+    margin: auto;
+    width: 70%;
+}
+.header {
+    background-color: #3F3D56  !important;
+}
+.footer {
+    background-color: transparent !important;
+}
+.content {
+    padding: '50px 50px';
+    margin: auto;
+}
+.button {
+    margin: 5% 43%;
+}

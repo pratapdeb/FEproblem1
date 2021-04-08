@@ -26,8 +26,31 @@ function * fetchVehicles () {
     }
 }
 
+function * findFalcon (action) {
+    try {
+        const res  = yield call(apiRequest, `${BASE_URLS.GET_TOKEN_URL}`, { method: 'POST', headers: { Accept:'application/json'}})
+        if(res) {
+            const {token} = res
+            const {data} = action
+            yield put({type: actions.FIND_FALCON_INIT})
+            const response  = yield call(apiRequest, `${BASE_URLS.FIND_FALCON_URL}`, { method: 'POST', headers: { Accept:'application/json'}, body: JSON.stringify({token, ...data})}, )
+            if(response)
+            { 
+                yield put({type: actions.FIND_FALCON_SUCCESS, payload: response})
+            }
+            else yield put({type: actions.FIND_FALCON_FAILED})
+        } else yield put({type: actions.FIND_FALCON_FAILED})
+        
+}
+    catch(err) {
+        yield put({type: actions.FETCH_VEHICLES_FAILED, payload: err})
+    }
+}
+
 
 export default function * actionWatcher () {
     yield takeLatest(actions.FETCH_PLANETS, fetchPlanets)
     yield takeLatest(actions.FETCH_VEHICLES, fetchVehicles)
+    yield takeLatest(actions.FIND_FALCON, findFalcon)
+
 }

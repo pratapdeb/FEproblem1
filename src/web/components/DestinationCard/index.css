@@ -1,0 +1,9 @@
+.column {
+    padding-top: 30px;
+    width: 14vw;
+    display: flex;
+}
+.select {
+    margin-top: 19px !important;
+    width: 14vw;
+}

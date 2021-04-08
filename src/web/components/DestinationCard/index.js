@@ -1,6 +1,7 @@
 import { React, Component } from "react";
 import { Select, Col, Card } from 'antd';
 import { isEmpty, find } from 'lodash'
+import './index.css'
 
 const { Option } = Select;
 class DestinationCard extends Component {
@@ -10,7 +11,7 @@ class DestinationCard extends Component {
         return {planets, vehicles}
     }
     buildOption = (options = []) => {
-        return options.map(option => (<Option value={option.name} key={option.name}>{option.name}</Option>))
+        return options.map(option => (<Option value={option.name} key={option.name}>{`${option.name} ${option.total_no ? '(' + option.total_no +')' :''}`}</Option>))
     }
 
     handlePlanetChange = (selectedPlanet) => {
@@ -36,12 +37,12 @@ class DestinationCard extends Component {
         const { planets } = this.state
         const { title } = this.props
         const filteredVehicles  = this.capacityFilter()
-        return <Col span={8}>
+        return <Col span={8} className='column'>
             <Card title={title}>
-               { !isEmpty(planets) &&  <Select placeholder = 'Select Planet' onChange={this.handlePlanetChange}>
+               { !isEmpty(planets) &&  <Select  className = 'select'  placeholder = 'Select Planet' onChange={this.handlePlanetChange}>
                    { this.buildOption(planets) }
                 </Select>}
-                { !isEmpty(filteredVehicles) && <Select placeholder = 'Select Vehicle' onChange={this.handleVehicleChange}>
+                { !isEmpty(filteredVehicles) && <Select  className = 'select' placeholder = 'Select Vehicle' onChange={this.handleVehicleChange}>
                     { this.buildOption(filteredVehicles) }
                 </Select> }
             </Card>

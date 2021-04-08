@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { Empty } from 'antd'
 import Home from '../home'
-import Result from '../result'
+import ResultPage from '../result'
 import {connect} from 'react-redux'
 const AppRouter = ({pages, defaultPage}) => {
     return (
@@ -30,7 +30,7 @@ const basePages = [
     },
     {
         path: '/result',
-        Component: Result
+        Component: ResultPage
     },
 
 ]
