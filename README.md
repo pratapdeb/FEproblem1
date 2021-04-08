@@ -18,7 +18,7 @@ Eslint - lintint the code
 Husky - Run script before git actions
 
 
-# assets
+# Assets
 All assets are under 'src/assets' folder 
 Logo
 Backgourd image 
