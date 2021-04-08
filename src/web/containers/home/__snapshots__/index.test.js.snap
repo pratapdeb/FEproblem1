@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DestinationCard/> Matches the snapshot 1`] = `
+<section
+  className="ant-layout layout"
+>
+  <header
+    className="ant-layout-header header"
+  >
+    <div
+      className="logo"
+    />
+    <img
+      alt="Logo"
+      src="logo.svg"
+    />
+  </header>
+  <main
+    className="ant-layout-content content"
+  >
+    <div
+      className="ant-row"
+      style={
+        Object {
+          "marginLeft": -8,
+          "marginRight": -8,
+        }
+      }
+    >
+       
+      <div
+        className="ant-col ant-col-8 column"
+        style={
+          Object {
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        <div
+          className="ant-card ant-card-bordered"
+        >
+          <div
+            className="ant-card-head"
+            style={Object {}}
+          >
+            <div
+              className="ant-card-head-wrapper"
+            >
+              <div
+                className="ant-card-head-title"
+              >
+                Destination1
+              </div>
+            </div>
+          </div>
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          />
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-8 column"
+        style={
+          Object {
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        <div
+          className="ant-card ant-card-bordered"
+        >
+          <div
+            className="ant-card-head"
+            style={Object {}}
+          >
+            <div
+              className="ant-card-head-wrapper"
+            >
+              <div
+                className="ant-card-head-title"
+              >
+                Destination2
+              </div>
+            </div>
+          </div>
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          />
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-8 column"
+        style={
+          Object {
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        <div
+          className="ant-card ant-card-bordered"
+        >
+          <div
+            className="ant-card-head"
+            style={Object {}}
+          >
+            <div
+              className="ant-card-head-wrapper"
+            >
+              <div
+                className="ant-card-head-title"
+              >
+                Destination3
+              </div>
+            </div>
+          </div>
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          />
+        </div>
+      </div>
+      <div
+        className="ant-col ant-col-8 column"
+        style={
+          Object {
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        <div
+          className="ant-card ant-card-bordered"
+        >
+          <div
+            className="ant-card-head"
+            style={Object {}}
+          >
+            <div
+              className="ant-card-head-wrapper"
+            >
+              <div
+                className="ant-card-head-title"
+              >
+                Destination4
+              </div>
+            </div>
+          </div>
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          />
+        </div>
+      </div>
+       
+    </div>
+    <button
+      className="ant-btn ant-btn-primary button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+         Find Felcon
+      </span>
+    </button>
+  </main>
+  <footer
+    className="ant-layout-footer footer"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+     ©2021  Finding AI Falcon
+  </footer>
+</section>
+`;
