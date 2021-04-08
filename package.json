@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "npx standardx",
-    "lint:fix": "npx standardx --fix"
+    "lint:fix": "npx standardx --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [

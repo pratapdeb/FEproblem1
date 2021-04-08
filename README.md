@@ -15,6 +15,13 @@ Redux - State managemnt of the react application
 AntDesign - UI components 
 Jest -  Testing librery
 Eslint - lintint the code
+Husky - Run script before git actions
+
+
+# assets
+All assets are under 'src/assets' folder 
+Logo
+Backgourd image 
 
 # Running the Application
 In the project directory, you can run:

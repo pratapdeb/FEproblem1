@@ -6,15 +6,16 @@ import './index.css'
 const { Option } = Select
 class DestinationCard extends Component {
     state = {}
+    // update the state once parent poprs are received 
     static getDerivedStateFromProps (props, state) {
       const { planets, vehicles } = props
       return { planets, vehicles }
     }
-
+    // common funciton to generent options for Select
     buildOption = (options = []) => {
       return options.map(option => (<Option value={option.name} key={option.name}>{`${option.name} ${option.total_no ? '(' + option.total_no + ')' : ''}`}</Option>))
     }
-
+    // calls parent to update the selected Planets 
     handlePlanetChange = (selectedPlanet) => {
       const { planets } = this.state
       const slPlanetObject = find(planets, ['name', selectedPlanet])
@@ -22,11 +23,12 @@ class DestinationCard extends Component {
       this.setState({ distance })
       this.props.onPlanetChange(selectedPlanet, this.props.title)
     }
-
+    // calls parent to update the selected vehicles 
     handleVehicleChange = (selectedVehicle) => {
       this.props.onVehicleChange(selectedVehicle, this.props.title)
     }
 
+    // filter out the vehicle if the planet distance is more than its maximum distance
     capacityFilter = () => {
       const { vehicles, distance } = this.state
       if (distance) {

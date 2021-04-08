@@ -1,3 +1,4 @@
+// based on the Environment URl can be swithed
 const BASE_URL_CONFIG = {
   dev: {
     VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
@@ -25,7 +26,7 @@ const BASE_URL_CONFIG = {
   }
 }
 
-// helps IDE to auto populate
+// helps IDE to auto populate URLS
 
 type BaseUrlsType = {
     VEHICLES_URL: string,
@@ -33,12 +34,19 @@ type BaseUrlsType = {
     GET_TOKEN_URL: string,
     FIND_FALCON_URL: string,
 }
-
+// swith enviromnet based on the URl 
 export const envConfigByLocation = ({ origin, host }) => {
   let envConfig
   switch (host) {
+    case 'website.qa.com':
+      envConfig = { baseUrls: BASE_URL_CONFIG.qa, env: 'qa' }
+    break
+    case 'website.demo.com':
+      envConfig = { baseUrls: BASE_URL_CONFIG.demo, env: 'demo' }
+    break
     case 'website.com':
-      break
+      envConfig = { baseUrls: BASE_URL_CONFIG.prod, env: 'prod' }
+    break
     default:
       envConfig = { baseUrls: BASE_URL_CONFIG.dev, env: 'dev' }
       break
