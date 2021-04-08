@@ -1,28 +1,28 @@
 const BASE_URL_CONFIG = {
-    dev: {
-        VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
-        PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
-        GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
-        FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
-    },
-    qa: {
-        VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
-        PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
-        GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
-        FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
-    },
-    demo: {
-        VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
-        PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
-        GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
-        FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
-    },
-    prod: {
-        VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
-        PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
-        GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
-        FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
-    }
+  dev: {
+    VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
+    PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
+    GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
+    FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
+  },
+  qa: {
+    VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
+    PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
+    GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
+    FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
+  },
+  demo: {
+    VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
+    PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
+    GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
+    FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
+  },
+  prod: {
+    VEHICLES_URL: 'https://findfalcone.herokuapp.com/vehicles',
+    PLANETS_URL: 'https://findfalcone.herokuapp.com/planets',
+    GET_TOKEN_URL: 'https://findfalcone.herokuapp.com/token',
+    FIND_FALCON_URL: 'https://findfalcone.herokuapp.com/find'
+  }
 }
 
 // helps IDE to auto populate
@@ -34,20 +34,20 @@ type BaseUrlsType = {
     FIND_FALCON_URL: string,
 }
 
-export const envConfigByLocation = ({origin, host}) => {
-    let envConfig
-    switch (host) {
-        case 'website.com':
-            break;
-        default:
-            envConfig = {baseUrls : BASE_URL_CONFIG.dev, env: 'dev'}
-            break;
-    }
-    return envConfig
+export const envConfigByLocation = ({ origin, host }) => {
+  let envConfig
+  switch (host) {
+    case 'website.com':
+      break
+    default:
+      envConfig = { baseUrls: BASE_URL_CONFIG.dev, env: 'dev' }
+      break
+  }
+  return envConfig
 }
 
-const selectedBaseUrls =  envConfigByLocation(window.location).baseUrls
+const selectedBaseUrls = envConfigByLocation(window.location).baseUrls
 
 export const BASE_URLS: BaseUrlsType = {
-    ...selectedBaseUrls
+  ...selectedBaseUrls
 }
